@@ -101,7 +101,9 @@ def calculate_ripeness_value(prediction, categories):
     }
 
 # Inisialisasi Firebase Admin SDK tanpa kredensial eksplisit
-cred = firebase_admin.credentials.Certificate("pisang-fc5bd-firebase-adminsdk-fbsvc-70a5904c4d.json")
+
+firebase_credentials = json.loads(os.getenv("FIREBASE_CREDENTIALS"))
+cred = firebase_admin.credentials.Certificate("firebase_credentials")
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://pisang-fc5bd-default-rtdb.firebaseio.com/',  # Ganti dengan URL Firebase Realtime Database kamu
     'projectId': 'pisang-fc5bd'  # Ganti dengan ID proyek Firebase kamu
