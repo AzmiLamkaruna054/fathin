@@ -1,5 +1,6 @@
 Flask
 tensorflow
+h5py
 firebase-admin
 Pillow
 numpy
