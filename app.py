@@ -13,9 +13,8 @@ import os
 app = Flask(__name__)
 
 # 🔥 Load model (ganti MODEL_PATH jika diperlukan)
-MODEL_PATH = "models/PISANG16CLASS.h5"
-if not os.path.exists(MODEL_PATH):
-    raise FileNotFoundError(f"Model tidak ditemukan di {MODEL_PATH}")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "models/PISANG16CLASS.h5")
 model = load_model(MODEL_PATH)
 
 # 🔥 Daftar label kelas
