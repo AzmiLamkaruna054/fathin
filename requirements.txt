@@ -1,0 +1,9 @@
+Flask
+tensorflow
+firebase-admin
+Pillow
+numpy
+absl-py
+werkzeug
+requests
+gunicorn
